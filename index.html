@@ -143,10 +143,9 @@ p {
 
 #demo{
   position: absolute;
-  top: 220px;
+  top: 260px;
   left: 90px;
-  font-size: 25px;
-  color: antiquewhite;
+  
 }
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
@@ -162,7 +161,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 120vh;
+  height: 140vh;
   letter-spacing: 1px;
 }
 
@@ -180,6 +179,7 @@ h1 {
 /* styling my button */
 
 .white-mode {
+  font-size: large;
   text-decoration: none;
   padding: 7px 10px;
   background-color: #122;
@@ -188,7 +188,7 @@ h1 {
   transition: .35s ease-in-out;
   position: absolute;
   left: 35%;
-  top: 85%;
+  top: 95%;
   font-family: "Montserrat";
 }
 
@@ -226,7 +226,7 @@ h1 {
  
 
 
-<p id="demo"></p>
+<img id="demo" src="images/marathi.jpeg" height="160px" width="175px"></img>
 
 <div class="title">
   <h1>PRE-REGISTER NOW AND GET <br/>DISCOUNTS UPTO 40%</h1>
@@ -234,34 +234,7 @@ h1 {
   
  </div>
 <script>
-// Set the date we're counting down to
-var countDownDate = new Date("Oct 1, 2021 10:00:00").getTime();
 
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-    
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-    
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
 
 function myFunction() {
   var x = document.getElementById("myTopnav");
