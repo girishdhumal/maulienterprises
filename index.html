@@ -7,6 +7,8 @@
 body {
   margin: 0;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-image: url(images/wall.jpg);
+  
 }
 
 .topnav {
@@ -22,16 +24,21 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  
+  
 }
 
 .topnav a:hover {
   background-color: rgb(213, 240, 169);
   color: black;
+  
 }
 
 .topnav a.active {
   background-color: white;
   color: rgb(10, 10, 10);
+  background-color: rgb(255, 255, 255);
+  
 }
 
 .topnav .icon {
@@ -43,7 +50,7 @@ body {
   .topnav a.icon {
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 8px;
     font-size: 25px;
     float: right;
     display: block;
@@ -64,13 +71,132 @@ body {
     text-align: left;
   }
 }
-#demo{
-  position: absolute;
-  padding-top: 5%;
-    left: 100px;
-    
-
+@keyframes example {
+  0%   {background-color: rgb(231, 177, 177);}
+  25%  {background-color: rgb(243, 243, 165);}
+  50%  {background-color: rgb(184, 184, 245);}
+  100% {background-color: rgb(169, 245, 169);}
 }
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+#container {
+  color:rgb(252, 185, 146);
+  text-transform: uppercase;
+  font-size:30px;
+  font-weight:bold;
+  padding-top:50px;  
+  position:fixed;
+  top: 100px;
+  left: 25px;
+  width:100%;
+  bottom:45%;
+  display:block;
+}
+
+#flip {
+  height:50px;
+  overflow:hidden;
+}
+
+#flip > div > div {
+  color:#fff;
+  padding:4px 12px;
+  height:45px;
+  margin-bottom:45px;
+  display:inline-block;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div div {
+  background:#42c58a;
+}
+#flip div:first-child div {
+  background:#4ec7f3;
+}
+#flip div:last-child div {
+  background:#DC143C;
+}
+
+@keyframes show {
+  0% {margin-top:-270px;}
+  5% {margin-top:-180px;}
+  33% {margin-top:-180px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
+}
+
+p {
+  position:fixed;
+  width:100%;
+  bottom:30px;
+  font-size:12px;
+  color:#999;
+  margin-top:100px;
+}
+#demo{
+  position: fixed;
+  top: 220px;
+  left: 90px;
+  font-size: 25px;
+  color: antiquewhite;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body {
+  background-color: #111;
+}
+
+.title {
+  font-family: "Montserrat";
+  text-align: center;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 120vh;
+  letter-spacing: 1px;
+}
+
+h1 {
+  background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: .75;
+  margin: 10px 0;
+}
+/* styling my button */
+
+.white-mode {
+  text-decoration: none;
+  padding: 7px 10px;
+  background-color: #122;
+  border-radius: 3px;
+  color: #FFF;
+  transition: .35s ease-in-out;
+  position: absolute;
+  left: 35%;
+  top: 85%;
+  font-family: "Montserrat";
+}
+
+.white-mode:hover {
+
+  background-color: #FFF;
+  color: #122;
+}
+
 </style>
 </head>
 <body>
@@ -84,14 +210,28 @@ body {
     <i class="fa fa-bars"></i>
   </a>
 </div>
-
-<div style="padding-left:16px">
-  <h2>MAULI ENTERPRISES</h2>
-  <p>WEBSITE WILL BE LIVE SOON</p>
+<!-- <hr size="6" width="75%" background-color="pink" color="black">   -->
+<div id=container>
+  MAULI ENTERPRISES
+  <div id=flip>
+   
+    
+    <div><div> 1ST OCTOBER 2021</div></div>
+    <div><div>LIVE ON</div></div>
+    <div><div>WEBSITE WILL BE  </div></div>
+  </div>
+  
 </div>
+ 
+
 
 <p id="demo"></p>
 
+<div class="title">
+  <h1>PRE-REGISTER NOW AND GET <br/>DISCOUNTS UPTO 40%</h1>
+  <a target="_blank" href="#" class="white-mode">REGISTER</a>
+  
+ </div>
 <script>
 // Set the date we're counting down to
 var countDownDate = new Date("Oct 1, 2021 10:00:00").getTime();
